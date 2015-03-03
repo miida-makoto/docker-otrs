@@ -43,7 +43,7 @@ RUN chgrp apache   /opt/otrs/Kernel/Config.pm
 RUN chmod g+w      /opt/otrs/Kernel/Config.pm
 
 #reconfigure httpd
-ADD httpd/zzz_otrs.conf /etc/httpd/conf.d/zzz_otrs.conf
+#ADD httpd/zzz_otrs.conf /etc/httpd/conf.d/zzz_otrs.conf
 RUN rm /etc/httpd/conf.d/welcome.conf
 
 #enable crons
