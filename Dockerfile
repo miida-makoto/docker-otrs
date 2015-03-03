@@ -39,7 +39,7 @@ RUN rpm -ivh http://ftp.otrs.org/pub/otrs/RPMS/rhel/7/otrs-4.0.6-01.noarch.rpm
 
 #OTRS COPY Configs
 ADD otrs/Config.pm /opt/otrs/Kernel/Config.pm
-RUN chgrp apache   /opt/otrs/Kernel/Config.pm
+RUN chown otrs:apache /opt/otrs/Kernel/Config.pm
 RUN chmod g+w      /opt/otrs/Kernel/Config.pm
 
 #reconfigure httpd
